@@ -30,15 +30,34 @@ midCircle_dood.id ="midCircle_dood"
 baruundeed=1
 baruundood=2
 zuundeed=3
+zuundood=4
 document.getElementById("midCircle").appendChild(midCircle_garchig)
 document.getElementById("midCircle").appendChild(midCircle_dund)
 document.getElementById("midCircle").appendChild(midCircle_dood)
 
 
-midCircle_dund.addEventListener("click", startFunction);
-    function startFunction( ) {
-
+midCircle_dund.addEventListener("click", startFunction)
+    function startFunction() {
+       let randomToo= Math.floor(Math.random() * 4)+1;
+        if(randomToo===4){
         document.getElementById("right-top").style.animation="ajillah 1s linear";
+        }
+        else if (randomToo===3) {
+            document.getElementById("left-top").style.animation="ajillah 1s linear";
+        }
+        else if (randomToo===2) {
+            document.getElementById("right-bottom").style.animation="ajillah 1s linear";
+
+        }
+        else if (randomToo===1) {
+            document.getElementById("left-bottom").style.animation="ajillah 1s linear";
+
+        }
+    }
+    
+
+        
+        // document.getElementById("right-top").style.animation="ajillah 1s linear";
 
         // zuundood=4
         // if(midCircle_dund===4) {
@@ -47,6 +66,6 @@ midCircle_dund.addEventListener("click", startFunction);
         
 
 
-    }
+    
 
 
